@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell</title>
+    <link rel="stylesheet" href="Pricing.css">
+</head>
+<body>
+    <div id="PriceHead">
+        <h1>Wassel</h1>
+    </div>
+    <div id='table'>
+        <table>
+            <tr>
+                <th>Material</th>
+                <th>Weight(In Kg)</th>
+            </tr>
+            <tr>
+                <td>Plastic</td>
+                <td><textarea id="input1"></textarea></td>
+            </tr>
+            <tr>
+                <td>Aluminum</td>
+                <td><textarea id="h2"></textarea></td>
+            </tr>
+            <tr>
+                <td>Iron</td>
+                <td><textarea id="h3"></textarea></td>
+            </tr>
+            <tr>
+                <td>Glass</td>
+                <td><textarea id="h4"></textarea></td>
+            </tr>
+            <tr>
+                <td>Paper</td>
+                <td><textarea id="h5"></textarea></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="c">
+        <button type="button" onclick="calculate()">
+
+            Calculate
+        </button>
+        <p id="result">Amount is</p>
+      </div>
+
+    
+    
+    <script lang="javascript">
+        function calculate() {
+        let pweight = document.getElementById('input1').value;
+        console.log(pweight)
+        let aweight = document.getElementById('h2').value;
+        let iweight = document.getElementById('h3').value;
+        let gweight = document.getElementById('h4').value;
+        let paperweight = document.getElementById('h5').value;
+        let finalpweight = pweight*50;
+        let finalaweight= aweight*100;
+        let finaliweight = iweight*100;
+        let finalgweight = gweight*100;
+        let finalpaperweight = paperweight*100;
+        let output = finalpweight + finalaweight + finaliweight + finalgweight + finalpaperweight;
+        
+      
+        document.getElementById('result').innerText = output
+        console.log('ran')
+        
+        };
+
+
+        
+        
+    </script>
+</body>
+</html>
